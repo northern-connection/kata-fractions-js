@@ -11,7 +11,7 @@ describe('Adding fractions', function() {
         expect(result.denominator()).toBe(1);
     });
 
-    it('when both operands have same denominator', function() {
+    it('when both operands have same denominator then numerators are added', function() {
         var fractionA = Fraction(1, 2);
         var fractionB = Fraction(2, 2);
 
