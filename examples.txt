@@ -4,7 +4,6 @@ Examples
 Mismo denominador:
 1/1 + 0/1 = 1/1
 1/2 + 2/2 = 3/2
-1/2 + 1/2  = 1/1
 
 Denominadores distintos
 1/2 + 1/1 = 3/2
@@ -16,6 +15,7 @@ Numerador mayor que el denominador
 
 Simplificable
 3/2 + 5/2 = 8/2 = 4/1
+1/2 + 1/2  = 2/2 = 1/1
 
 Resta
 1/2 - 1/2 = 0/2

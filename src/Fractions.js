@@ -3,7 +3,10 @@
 function Fraction(numerator, denominator) {
     return {
         add: function (other) {
-            return Fraction(numerator, denominator);
+            return Fraction(
+                numerator + other.numerator(),
+                denominator
+            );
         },
 
         numerator: function () {

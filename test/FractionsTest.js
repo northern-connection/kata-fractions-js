@@ -10,4 +10,14 @@ describe('Adding fractions', function() {
         expect(result.numerator()).toBe(1);
         expect(result.denominator()).toBe(1);
     });
+
+    it('when both operands have same denominator', function() {
+        var fractionA = Fraction(1, 2);
+        var fractionB = Fraction(2, 2);
+
+        var result = fractionA.add(fractionB);
+
+        expect(result.numerator()).toBe(3);
+        expect(result.denominator()).toBe(2);
+    });
 });
