@@ -12,12 +12,22 @@ describe('Adding fractions', function() {
     });
 
     it('when both operands have same denominator then numerators are added', function() {
-        var fractionA = Fraction(1, 2);
-        var fractionB = Fraction(2, 2);
+        var fractionA = Fraction(1, 1);
+        var fractionB = Fraction(2, 1);
 
         var result = fractionA.add(fractionB);
 
         expect(result.numerator()).toBe(3);
-        expect(result.denominator()).toBe(2);
+        expect(result.denominator()).toBe(1);
+    });
+
+    it('when denominators are different', function() {
+        var fractionA = Fraction(1, 2);
+        var fractionB = Fraction(1, 3);
+
+        var result = fractionA.add(fractionB);
+
+        expect(result.numerator()).toBe(5);
+        expect(result.denominator()).toBe(6);
     });
 });

@@ -4,8 +4,9 @@ function Fraction(numerator, denominator) {
     return {
         add: function (other) {
             return Fraction(
-                numerator + other.numerator(),
-                denominator
+                numerator * other.denominator()
+                + other.numerator() * denominator ,
+                denominator * other.denominator()
             );
         },
 
