@@ -3,6 +3,10 @@
 function Fraction(numerator, denominator) {
     return {
         add: function (other) {
+            if (denominator === other.denominator()) {
+                return Fraction(numerator + other.numerator(),
+                    denominator);
+            }
             return Fraction(
                 numerator * other.denominator()
                 + other.numerator() * denominator ,
