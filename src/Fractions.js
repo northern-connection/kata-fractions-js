@@ -3,24 +3,13 @@
 function Fraction(numerator, denominator) {
     return {
         add: function (other) {
-            var returnNumerator;
-            var returnDenominator;
+            var num = numerator * other.denominator()
+                + other.numerator() * denominator;
 
-            if (denominator === other.denominator()) {
-                returnNumerator = numerator + other.numerator();
-                returnDenominator = denominator;
-            } else {
-                returnNumerator = numerator * other.denominator()
-                    + other.numerator() * denominator;
-                returnDenominator = denominator * other.denominator();
-            }
+            var dem = denominator * other.denominator();
+            var gcd = Integers.gcd(num, dem);
 
-            var gcd = Integers.gcd(returnNumerator, returnDenominator);
-
-            return Fraction(
-                returnNumerator / gcd,
-                returnDenominator / gcd
-            );
+            return Fraction(num / gcd, dem / gcd);
         },
 
         numerator: function () {
