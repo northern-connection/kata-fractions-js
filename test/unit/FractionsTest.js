@@ -29,4 +29,14 @@ describe('Adding fractions', function() {
         expect(result.numerator()).toBe(5);
         expect(result.denominator()).toBe(6);
     });
+
+    it('simplifies result after operation', function () {
+        var fractionA = Fraction(1, 2);
+        var fractionB = Fraction(1, 2);
+
+        var result = fractionA.add(fractionB);
+
+        expect(result.numerator()).toBe(1);
+        expect(result.denominator()).toBe(1);
+    });
 });

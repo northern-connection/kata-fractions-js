@@ -15,9 +15,11 @@ function Fraction(numerator, denominator) {
                 returnDenominator = denominator * other.denominator();
             }
 
+            var gcd = Integers.gcd(returnNumerator, returnDenominator);
+
             return Fraction(
-                returnNumerator,
-                returnDenominator
+                returnNumerator / gcd,
+                returnDenominator / gcd
             );
         },
 
