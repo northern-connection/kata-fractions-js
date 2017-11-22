@@ -3,14 +3,21 @@
 function Fraction(numerator, denominator) {
     return {
         add: function (other) {
+            var returnNumerator;
+            var returnDenominator;
+
             if (denominator === other.denominator()) {
-                return Fraction(numerator + other.numerator(),
-                    denominator);
+                returnNumerator = numerator + other.numerator();
+                returnDenominator = denominator;
+            } else {
+                returnNumerator = numerator * other.denominator()
+                    + other.numerator() * denominator;
+                returnDenominator = denominator * other.denominator();
             }
+
             return Fraction(
-                numerator * other.denominator()
-                + other.numerator() * denominator ,
-                denominator * other.denominator()
+                returnNumerator,
+                returnDenominator
             );
         },
 
