@@ -12,6 +12,11 @@ function Fraction(numerator, denominator) {
             return Fraction(num / gcd, dem / gcd);
         },
 
+        subtract: function (other) {
+            return Fraction(numerator, denominator)
+                .add(Fraction(-other.numerator(), other.denominator()))
+        },
+
         numerator: function () {
             return numerator;
         },

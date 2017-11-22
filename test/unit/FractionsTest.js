@@ -42,5 +42,14 @@ describe('Fractions', function () {
         });
 
     });
-});
 
+    describe('subtraction', function () {
+        it('is a special case of addition', function () {
+            var subtraction = Fraction(1, 2).subtract(Fraction(1, 2));
+            var addition = Fraction(1, 2).add(Fraction(-1, 2));
+
+            expect(subtraction.numerator()).toBe(addition.numerator());
+            expect(subtraction.denominator()).toBe(addition.denominator());
+        });
+    });
+});
